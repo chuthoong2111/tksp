@@ -1,104 +1,404 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Overlay example</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
     <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <header>
+    <link rel="stylesheet" href="css/pdf.css" />
+</head>
+<body>
+    <div class="fix-btn d-flex w-100">
+        <a href="#" class="">
+           <span><svg width="24PX" height="24PX" FILL="#03a9f4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-check-fill">
+            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1.146 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+          </svg></span> Validate
+        </a>
+        <a href="#" class="">
+          <span><svg width="24px" height="24px" fill="#d12533" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+            <path d="M854.6 288.7c6 6 9.4 14.1 9.4 22.6V928c0 17.7-14.3 32-32 32H192c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32h424.7c8.5 0 16.7 3.4 22.7 9.4l215.2 215.3zM790.2 326L602 137.8V326h188.2zM633.22 637.26c-15.18-.5-31.32.67-49.65 2.96-24.3-14.99-40.66-35.58-52.28-65.83l1.07-4.38 1.24-5.18c4.3-18.13 6.61-31.36 7.3-44.7.52-10.07-.04-19.36-1.83-27.97-3.3-18.59-16.45-29.46-33.02-30.13-15.45-.63-29.65 8-33.28 21.37-5.91 21.62-2.45 50.07 10.08 98.59-15.96 38.05-37.05 82.66-51.2 107.54-18.89 9.74-33.6 18.6-45.96 28.42-16.3 12.97-26.48 26.3-29.28 40.3-1.36 6.49.69 14.97 5.36 21.92 5.3 7.88 13.28 13 22.85 13.74 24.15 1.87 53.83-23.03 86.6-79.26 3.29-1.1 6.77-2.26 11.02-3.7l11.9-4.02c7.53-2.54 12.99-4.36 18.39-6.11 23.4-7.62 41.1-12.43 57.2-15.17 27.98 14.98 60.32 24.8 82.1 24.8 17.98 0 30.13-9.32 34.52-23.99 3.85-12.88.8-27.82-7.48-36.08-8.56-8.41-24.3-12.43-45.65-13.12zM385.23 765.68v-.36l.13-.34a54.86 54.86 0 0 1 5.6-10.76c4.28-6.58 10.17-13.5 17.47-20.87 3.92-3.95 8-7.8 12.79-12.12 1.07-.96 7.91-7.05 9.19-8.25l11.17-10.4-8.12 12.93c-12.32 19.64-23.46 33.78-33 43-3.51 3.4-6.6 5.9-9.1 7.51a16.43 16.43 0 0 1-2.61 1.42c-.41.17-.77.27-1.13.3a2.2 2.2 0 0 1-1.12-.15 2.07 2.07 0 0 1-1.27-1.91zM511.17 547.4l-2.26 4-1.4-4.38c-3.1-9.83-5.38-24.64-6.01-38-.72-15.2.49-24.32 5.29-24.32 6.74 0 9.83 10.8 10.07 27.05.22 14.28-2.03 29.14-5.7 35.65zm-5.81 58.46l1.53-4.05 2.09 3.8c11.69 21.24 26.86 38.96 43.54 51.31l3.6 2.66-4.39.9c-16.33 3.38-31.54 8.46-52.34 16.85 2.17-.88-21.62 8.86-27.64 11.17l-5.25 2.01 2.8-4.88c12.35-21.5 23.76-47.32 36.05-79.77zm157.62 76.26c-7.86 3.1-24.78.33-54.57-12.39l-7.56-3.22 8.2-.6c23.3-1.73 39.8-.45 49.42 3.07 4.1 1.5 6.83 3.39 8.04 5.55a4.64 4.64 0 0 1-1.36 6.31 6.7 6.7 0 0 1-2.17 1.28z"/>
+          </svg>
+          </span>  Export PDF
+        </a>
+    </div>
+    <header class="header">
         <div class="bgr-header">
             <div class="tophead">
-                  <h2 class="logo"><img src="https://www.asiatica.com/assets/images/logo-asiatica-travel.png" alt="#" height="44"></h2>
-                  <h3>Slogan</h3>
-             <!-- HAMBURGER MENU -->
+                <h2 class="logo"><img src="./images/logo-asiatica-travel.png" alt="#" height="44px"></h2>
+                <h3>Slogan</h3>
+                <!-- HAMBURGER MENU -->
                 <div class="hamburger-menu" id="hamburger-menu">
-            <div class="menu-bar1"></div>
-            <div class="menu-bar2"></div>
-            <div class="menu-bar3"></div>
-                  </div>
+                    <div class="menu-bar1"></div>
+                    <div class="menu-bar2"></div>
+                    <div class="menu-bar3"></div>
                 </div>
-                <div class="acount-user">
-            <div class="user">
-                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 21.75C17.3848 21.75 21.75 17.3848 21.75 12C21.75 6.61522 17.3848 2.25 12 2.25C6.61522 2.25 2.25 6.61522 2.25 12C2.25 17.3848 6.61522 21.75 12 21.75Z" stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 12C13.2416 12 14.248 10.9926 14.248 9.75C14.248 8.50736 13.2416 7.5 12 7.5C10.7584 7.5 9.75197 8.50736 9.75197 9.75C9.75197 10.9926 10.7584 12 12 12Z" stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.9974 14.25C16.6528 14.25 17.9737 15.7453 16.8057 16.9195C15.703 18.0281 13.9431 18.75 12 18.75C10.0569 18.75 8.29702 18.0281 7.19428 16.9195C6.02632 15.7453 7.34722 14.25 9.00262 14.25L14.9974 14.25Z" stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </div>
+            <div class="acount-user">
+                <div class="user">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.75C17.3848 21.75 21.75 17.3848 21.75 12C21.75 6.61522 17.3848 2.25 12 2.25C6.61522 2.25 2.25 6.61522 2.25 12C2.25 17.3848 6.61522 21.75 12 21.75Z" stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 12C13.2416 12 14.248 10.9926 14.248 9.75C14.248 8.50736 13.2416 7.5 12 7.5C10.7584 7.5 9.75197 8.50736 9.75197 9.75C9.75197 10.9926 10.7584 12 12 12Z" stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14.9974 14.25C16.6528 14.25 17.9737 15.7453 16.8057 16.9195C15.703 18.0281 13.9431 18.75 12 18.75C10.0569 18.75 8.29702 18.0281 7.19428 16.9195C6.02632 15.7453 7.34722 14.25 9.00262 14.25L14.9974 14.25Z" stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     Mr.Do Ngoc Long
-            </div>
-            <a href="#">Logout</a>
                 </div>
+                <a href="#">Logout</a>
+            </div>
         </div>
-    <nav class="sticky-menu">
-        <ul class="list-unstyled">
-            <li><a href="#">Program</a></li>
-            <li><a href="#">Hotel</a></li>
-            <li><a href="#">Price</a></li>
-            <li><a href="#">Picture</a></li>            
-        </ul>
-    </nav>
+        <nav class="sticky-menu">
+            <ul class="list-unstyled">
+                <li><a href="#programe">Program</a></li>
+                <li><a href="#hotel">Hotel</a></li>
+                <li><a href="#price">Price</a></li>
+                <li><a href="#gallery">Picture</a></li>
+            </ul>
+        </nav>
     </header>
-     <!-- Video Source -->
-  <!-- https://www.pexels.com/video/aerial-view-of-beautiful-resort-2169880/ -->
-  <section class="showcase">
-   
-    <video src="https://traversymedia.com/downloads/videos/explore.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
-    <div class="text">
-      <h2>Never Stop To </h2> 
-      <h3>Exploring The World</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.</p>
-      <a href="#">Explore</a>
+    <section class="programe" id="programe">
+        <div class="overview">
+            <h1 class="p-1rem text-center text-red name-tour">
+                NORTHERN VIETNAM DISCOVERY
+            </h1>
+            <div class="box-client container">
+                <ul>
+                    <li>
+                        <span>Client’s Highlight:</span> Mr. Barouch Gady Baron
+                    </li>
+                    <li>
+                        <span>Number of participants: </span> 4 adults
+                    </li>
+                    <li>
+                        <span>Number of rooms:</span> 2 Double
+                    </li>
+                    <li>
+                        <span>Travel date From:</span> 10 April to 19 April 2023
+                    </li>
+                    <li>
+                        <span>Duration:</span> 10 days
+                    </li>
+                    <li>
+                        <span>Travel consultant:</span> Ms. Luong
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="map">
+            <h3 class="p-1rem text-center text-white bg-blue">
+                ITINERARY IN BRIEF
+            </h3>
+            <div class="map">
+                <img src="https://i.pinimg.com/originals/fa/a9/7e/faa97e971c4f6a586e3f08d6045b7d38.jpg" class="w-100">
+            </div>
+            <div class="box-client container">
+                <ul>
+                    <li>
+                        <span>Day 01: </span> Hanoi arrival - street food tour
+                    </li>
+                    <li>
+                        <span>Day 01: </span> Hanoi arrival - street food tour
+                    </li>
+                    <li>
+                        <span>Day 01: </span> Hanoi arrival - street food tour
+                    </li>
+                    <li>
+                        <span>Day 01: </span> Hanoi arrival - street food tour
+                    </li>
+                    <li>
+                        <span>Day 01: </span> Hanoi arrival - street food tour
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail">
+            <h3 class="p-1rem text-center text-white bg-blue">
+                DETAILED PROGRAM
+            </h3>
+            <div class="container">
+                <div class="item-day">
+                    <div class="day">
+                        <strong>Day 01:</strong> Mon 10 April 2023
+                        Guide and driver
+                    </div>
+                    <div class="day-title color-blue">Hanoi arrival - street food tour <span>(-)</span></div>
+                    <div class="day-content">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5YX9aAzsFpu2_L5DyTQiWFDnC-_c31K__xQ&usqp=CAU"
+                             class="w-100">
+                        Arrival in Noi Bai airport , you will be picked up then transferred to the hotel in city center. The check-in
+                        is
+                        available at
+                        2 pm.
+                        In the afternoon, discover the Old Quarter, also known as the “36 Streets & Corporations”. It is a veritable
+                        labyrinth
+                        of lanes where each of them is specialized in a trade or art. The best way to explore and discover this
+                        district
+                        full of life
+                        is by foot. Designed to capture all aspects of local life, the course will cover all the elements of the daily
+                        life of the
+                        inhabitants in an original way: crafts, Buddhism, temple, gastronomy, local market, visit of traditional
+                        house-tube
+                        (VietHighlightse particularity), medicine…
+                        Discover the capital through food, as a local, a real experience and a highlight of the journey.
+                        The tour ends with a stroll around the HoanKiem Lake (Lake of the Restored Sword). Overnight in Hanoi
+                    </div>
+                    <div class="day-hightlight"
+                         style="background-image: url(https://img.myloview.com/canvas-prints/wall-vintHighlight-white-background-of-natural-cement-or-stone-old-texture-material-for-your-product-or-background-400-199384089.jpg);">
+                        <h3>Street Food Tour</h3>
+                        Hanoi is full of secret places & wonderful stories. With a history going back over 2.000 years, it makes the
+                        capital a promising destination for any gastronomic tourist. We decided to make you discover the Old
+                        Quarter with a local culinary point of view in an original way among the 36 Corporations. In the course of
+                        this
+                        tour (more or less 2h45), the traveler will discover North specialties such as Bun cha (noodle & BBQ meat),
+                        Bia (local ale),... & above all, a wide vision of handicrafts shops & traditional works. Also, traffic jam
+                        which is
+                        tough at the beginning will become a formality when you will finish this tour & have learned the tips to go
+                        across a street (so it will make rest of the trip smoother).
+                        Day 02
+                        <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5YX9aAzsFpu2_L5DyTQiWFDnC-_c31K__xQ&usqp=CAU"
+                             class="w-100">
+                    </div>
+                </div>
+                <div class="item-day">
+                    <div class="day">
+                        <strong>Day 01:</strong> Mon 10 April 2023
+                        Guide and driver
+                    </div>
+                    <div class="day-title color-blue">Hanoi arrival - street food tour <span>(B)</span></div>
+                    <div class="day-content">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5YX9aAzsFpu2_L5DyTQiWFDnC-_c31K__xQ&usqp=CAU"
+                             class="w-100">
+                        Arrival in Noi Bai airport , you will be picked up then transferred to the hotel in city center. The check-in
+                        is
+                        available at
+                        2 pm.
+                        In the afternoon, discover the Old Quarter, also known as the “36 Streets & Corporations”. It is a veritable
+                        labyrinth
+                        of lanes where each of them is specialized in a trade or art. The best way to explore and discover this
+                        district
+                        full of life
+                        is by foot. Designed to capture all aspects of local life, the course will cover all the elements of the daily
+                        life of the
+                        inhabitants in an original way: crafts, Buddhism, temple, gastronomy, local market, visit of traditional
+                        house-tube
+                        (VietHighlightse particularity), medicine…
+                        Discover the capital through food, as a local, a real experience and a highlight of the journey.
+                        The tour ends with a stroll around the HoanKiem Lake (Lake of the Restored Sword). Overnight in Hanoi
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hotel" id="hotel">
+        <h3 class="p-1rem text-center text-white bg-blue">
+            HOTEL LIST
+        </h3>
+        <div class="table-hotel container">
+            <table class="table">
+                <thead>
+                <th>Place</th>
+                <th>Name of hotel</th>
+                <th>Highlight</th>
+                <th>Complementary</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Place">1</td>
+                        <td data-label="Name of hotel">Dinesh</td>
+                        <td data-label="Highlight">34</td>
+                        <td data-label="Complementary">50%</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Place">2</td>
+                        <td data-label="Name of hotel">Kamal</td>
+                        <td data-label="Highlight">23</td>
+                        <td data-label="Complementary">70%</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Place">3</td>
+                        <td data-label="Name of hotel">Neha</td>
+                        <td data-label="Highlight">20</td>
+                        <td data-label="Complementary">90%</td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Place">4</td>
+                        <td data-label="Name of hotel">Priya</td>
+                        <td data-label="Highlight">30</td>
+                        <td data-label="Complementary">30%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="price" id="price">
+        <h3 class="p-1rem text-center text-white bg-blue">
+            PRICE
+        </h3>
+        <div class="table-hotel container">
+            <table class="table">
+                <thead>
+                <th>Room type</th>
+                <th>Price</th>
+                <th>Unit</th>
+                <th>Note</th>
+                </thead>
+                <tbody>
+                    <tr class="price-tb">
+                        <td data-label="Room type">Double</td>
+                        <td data-label="Price"><STRONG class="color-red">998</STRONG></td>
+                        <td data-label="Unit">USD</td>
+                        <td data-label="Note">per person</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <h2 class="price-area">Total price:<span class="color-red"> 3,992 USD</span> /Group</h2>
+            <div class="day-hightlight"
+                 style="background-image: url(https://img.myloview.com/canvas-prints/wall-vintHighlight-white-background-of-natural-cement-or-stone-old-texture-material-for-your-product-or-background-400-199384089.jpg);">
+                <h3>
+                    Bonus from Asiatica Travel:
+                    Two
+                </h3>
+                <span class="color-red">+</span> Two bottles of water available per person per day of visit
+            </div>
+            <br>
+            <h4 class="color-blue">include</h4>
+            <ul>
+                <li>
+                    <span>Client’s Highlight:</span> Mr. Barouch Gady Baron
+                </li>
+                <li>
+                    <span>Number of participants: </span> 4 adults
+                </li>
+                <li>
+                    <span>Number of rooms:</span> 2 Double
+                </li>
+                <li>
+                    <span>Travel date From:</span> 10 April to 19 April 2023
+                </li>
+                <li>
+                    <span>Duration:</span> 10 days
+                </li>
+                <li>
+                    <span>Travel consultant:</span> Ms. Luong
+                </li>
+            </ul>
+            <h4 class="color-blue">Exclude</h4>
+            <ul>
+                <li>
+                    <span>Client’s Highlight:</span> Mr. Barouch Gady Baron
+                </li>
+                <li>
+                    <span>Number of participants: </span> 4 adults
+                </li>
+                <li>
+                    <span>Number of rooms:</span> 2 Double
+                </li>
+                <li>
+                    <span>Travel date From:</span> 10 April to 19 April 2023
+                </li>
+                <li>
+                    <span>Duration:</span> 10 days
+                </li>
+                <li>
+                    <span>Travel consultant:</span> Ms. Luong
+                </li>
+            </ul>
+        </div>
+        <div class="condation">
+            <h3 class="p-1rem text-center text-white bg-blue">
+                BOOKING CONDITIONS
+            </h3>
+            <div class="container">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsam quam recusandae aut quidem deleniti ab.
+                    Tenetur laudantium excepturi sit vero repellendus cupiditate animi, officiis modi, delectus unde itaque
+                    repellat.
+    
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsam quam recusandae aut quidem deleniti ab.
+                    Tenetur laudantium excepturi sit vero repellendus cupiditate animi, officiis modi, delectus unde itaque
+                    repellat.
+    
+                </p>
+            </div>
+        </div>
+    </section>
+   <section class="gallery" id="gallery">
+    Gallery
+   </section>
+    <section class="sale">
+        <div class="container">
+            <div class="text-center"><img src="https://placehold.jp/300x400.png"></div>
+            <div class="info box-client text-center">
+                <p><span> Ms.</span> Luong Thuy My (Andrea)</p>
+                <p><span>Email:</span> my@asiatica.com</p>
+                <p><span>Tel.:</span> +84 2462662816 (ext: 145)</p>
+                <p><span> Mobile: </span>(+84) 963 220 385</p>
+            </div>
+        </div>
+        <blockquote class="blockquote">
+            <svg viewBox="0 0 512 512" width="40" title="quote-left" class="quote-icon">
+                <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
+            </svg>
+            <p class="quote">
+                Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
+            </p>
+            <p class="author">— Albert Einstein</p>
+            <hr>
+        </blockquote>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
-    <ul class="social">
-      <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" alt="#"></a></li>
-      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt="#"></a></li>
-      <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt="#"></a></li>
-    </ul>
-  </section>
-  <section class="showcase">
-   
-    <video src="https://traversymedia.com/downloads/videos/explore.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
-    <div class="text">
-      <h2>Never Stop To </h2> 
-      <h3>Exploring The World</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.</p>
-      <a href="#">Explore</a>
-    </div>
-    <ul class="social">
-      <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" alt="#"></a></li>
-      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt="#"></a></li>
-      <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt="#"></a></li>
-    </ul>
-  </section>
-  <div class="menu">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Destination</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-  </body>
-  <script>
+</body>
+<script>
      const menuToggle = document.querySelector('.hamburger-menu');
       const sidebar = document.querySelector('.menu');
-
+      let navbarLinks = document.querySelectorAll(".sticky-menu a");
       menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         sidebar.classList.toggle('active');
         document.body.classList.toggle('overlay-hidden');
       })
-  </script>
+    //   scroll
+    let scrollpos = window.scrollY
+  const header = document.querySelector(".header")
+  
+  const header_height = header.offsetHeight
+
+
+  const add_class_on_scroll = () => header.classList.add("fade-in")
+  const remove_class_on_scroll = () => header.classList.remove("fade-in")
+
+  window.addEventListener("scroll", e => {
+    scrollpos = window.scrollY;
+//   const padHeight = header.outerHeight;
+    if (scrollpos >= header_height) { add_class_on_scroll() ;
+        document.body.style.paddingTop = header_height +'px'}
+    else { remove_class_on_scroll(); document.body.style.paddingTop = '0px'; }
+
+    navbarLinks.forEach(link => {
+      let section = document.querySelector(link.hash);
+      if (scrollpos + 240 > section.offsetTop && scrollpos + 240 < section.offsetTop + section.offsetHeight ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+})
+</script>
 </html>
