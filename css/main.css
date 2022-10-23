@@ -18,7 +18,8 @@ html {
   scroll-behavior: smooth;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
 }
 
@@ -220,6 +221,14 @@ header .logo {
   line-height: 1.3;
 }
 
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
 .fix-btn {
   position: fixed;
   bottom: 0;
@@ -275,4 +284,30 @@ header .logo {
 }
 .price ul li::marker {
   color: #03a9f4;
+}
+
+.btn {
+  border: 0;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  letter-spacing: 1;
+  font-size: 80%;
+  border-radius: 0.25rem;
+}
+.btn svg {
+  margin-left: 8px;
+}
+
+.btn-primary {
+  background: #0A68B3;
+  color: #Fff;
+  transition: all 0.35s ease-in-out;
+}
+.btn-primary:hover {
+  background: #DA2032;
+  color: #fff;
+}
+
+.info {
+  margin-left: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
