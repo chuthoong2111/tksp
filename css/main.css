@@ -11,6 +11,18 @@
   font-family: "Inter", sans-serif;
 }
 
+.bg-red {
+  background: #DA2032;
+}
+
+.bg-blue {
+  background: #0A68B3;
+}
+.bg-blue.not-important {
+  background: #AAB5BA;
+  color: #454545;
+}
+
 .d-none {
   display: none !important;
 }
@@ -87,7 +99,12 @@ header.fade-in {
   padding: 1rem 1rem 0.25rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+}
+.tophead .slogan {
+  margin-right: auto;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
 }
 
 .acount-user {
@@ -105,6 +122,9 @@ header .logo {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+}
+header .logo img {
+  margin-bottom: -2px;
 }
 
 /***********************/
@@ -153,7 +173,7 @@ header .logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #053A63;
+  background: #0A68B3;
 }
 .sticky-menu li a {
   border-radius: 0.25rem;
@@ -189,46 +209,59 @@ header .logo {
   z-index: 100;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   transition: all ease-in-out 0.3s;
   align-items: center;
   width: 100vw;
-  padding-top: 80px;
 }
 .menu.active {
   transform: translateX(0);
-  background-color: #4A90C7;
+  background-color: #fff;
+}
+.menu .sale {
+  padding: 2rem;
+  color: #454545;
+  background: #e2e2e2;
+  border-top: 1px solid #ddd;
+}
+
+.text-welcome {
+  color: #666;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  background: #e2e2e2;
+  text-align: center;
+  margin: 0.5rem;
+  margin-top: auto;
 }
 
 .menu ul {
+  display: block;
   position: relative;
+  background-color: #AAB5BA;
+  margin-top: 115px;
+  border: 0.5rem #fff solid;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 0 8rem;
 }
 
 .menu ul li {
   list-style: none;
 }
-.menu ul li:first-child {
-  font-family: var(--hand-font);
-  font-size: 1.8rem;
-  color: #fff;
-  margin-bottom: 2rem;
-}
-.menu ul li.sale {
-  margin-top: 2rem;
-  padding: 1rem;
-  color: #eee;
-}
 .menu ul li .box-client span {
-  color: #ccc;
+  color: #777;
 }
 
 .menu ul li a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #fff;
+  color: #454545;
   padding: 1rem 3rem;
   display: block;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  text-transform: uppercase;
 }
 
 .menu ul li a:hover {
@@ -441,10 +474,10 @@ header .logo {
 }
 
 .footer {
-  background: #053A63;
+  background: #AAB5BA;
   padding: 3rem 1rem;
-  color: #ccc;
+  color: #424242;
 }
 .footer h3 {
-  color: #f2f2f2;
+  color: #242424;
 }/*# sourceMappingURL=main.css.map */
