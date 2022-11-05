@@ -153,7 +153,7 @@ header .logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #232323;
+    background: #053A63;
   }
 
   li {
@@ -203,7 +203,7 @@ header .logo {
 
   &.active {
     transform: translateX(0);
-    background-color: #121f58;
+    background-color: #4A90C7;
   }
 }
 
@@ -217,25 +217,33 @@ header .logo {
   &:first-child {
     font-family: var(--hand-font);
     font-size: 1.8rem;
-    color: #29aae1;
+    color: #fff;
+    margin-bottom: 2rem;
   }
 
   &.sale {
+    margin-top: 2rem;
     padding: 1rem;
+    color: #eee;
+  }
+
+  .box-client span {
     color: #ccc;
   }
 }
 
 .menu ul li a {
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1.2rem;
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 3rem;
   display: block;
+  border-bottom: 1px solid rgba(#fff, .12);
 }
 
 .menu ul li a:hover {
   color: #03a9f4;
+  background: #fff;
 }
 
 @media (max-width: 991px) {
@@ -474,7 +482,7 @@ header .logo {
 
 
 .footer {
-  background: #232323;
+  background: #053A63;
   padding: 3rem 1rem;
   color: #ccc;
 
