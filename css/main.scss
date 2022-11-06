@@ -169,6 +169,13 @@ header .logo {
 
 // sticky menu
 .sticky-menu {
+  &.fade-in {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: smoothScroll 1s forwards;
+  }
+
   ul {
     list-style: none;
     margin: 0;
@@ -185,6 +192,7 @@ header .logo {
       padding: .5rem 1rem;
       transition: $transation;
       color: #fff;
+      display: block;
 
       &.active {
         background: #DA2032;
@@ -536,4 +544,20 @@ header .logo {
   h3 {
     color: #242424;
   }
+}
+
+// udate 20221106
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+
+  .close span {
+    font-weight: 100;
+    font-size: 28px;
+  }
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 400;
 }

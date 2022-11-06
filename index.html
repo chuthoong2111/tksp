@@ -510,6 +510,7 @@
   const sidebar = document.querySelector('.menu');
   const stickyMenu = document.querySelector('.sticky-menu');
   const fixBtn = document.querySelector('.fix-btn');
+  const header = document.querySelector(".header");
   let navbarLinks = document.querySelectorAll(".sticky-menu a");
   menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
@@ -519,14 +520,15 @@
     document.body.classList.toggle('overlay-hidden');
   })
   //   scroll
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".header")
-
-  const header_height = header.offsetHeight
+  let scrollpos = window.scroll;
 
 
-  const add_class_on_scroll = () => header.classList.add("fade-in")
-  const remove_class_on_scroll = () => header.classList.remove("fade-in")
+  const header_height = header.offsetHeight;
+  const stickyMenu_height = stickyMenu.offsetHeight;
+
+
+  const add_class_on_scroll = () => stickyMenu.classList.add("fade-in");
+  const remove_class_on_scroll = () => stickyMenu.classList.remove("fade-in");
 
   window.addEventListener("scroll", e => {
     scrollpos = window.scrollY;

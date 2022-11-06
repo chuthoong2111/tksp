@@ -166,6 +166,13 @@ header .logo img {
   transform: rotate(45deg) translate(-0.3rem, -0.35rem);
 }
 
+.sticky-menu.fade-in {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-animation: smoothScroll 1s forwards;
+          animation: smoothScroll 1s forwards;
+}
 .sticky-menu ul {
   list-style: none;
   margin: 0;
@@ -180,6 +187,7 @@ header .logo img {
   padding: 0.5rem 1rem;
   transition: all 0.35s ease-in-out;
   color: #fff;
+  display: block;
 }
 .sticky-menu li a.active {
   background: #DA2032;
@@ -487,4 +495,18 @@ header .logo img {
 }
 .footer h3 {
   color: #242424;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-header .close span {
+  font-weight: 100;
+  font-size: 28px;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 400;
 }/*# sourceMappingURL=main.css.map */
