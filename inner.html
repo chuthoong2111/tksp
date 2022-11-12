@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overlay example</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  </style>
+  <link rel="stylesheet" href="css/pdf.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/fix.css" />
+</head>
+
+<body>
+  <div class="fix-btn d-flex w-100">
+    <a href="#" class="">
+      <span>
+        <svg width="24px" height="24px" FILL="#03a9f4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor" class="bi bi-clipboard-check">
+          <path fill-rule="evenodd"
+            d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+          <path
+            d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+          <path
+            d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+        </svg>
+      </span> Validate
+    </a>
+    <a href="#" class="">
+      <span><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-edit-3">
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+        </svg>
+      </span> Edit programe
+    </a>
+  </div>
+  <header class="header">
+    <div class="bgr-header">
+      <div class="tophead">
+        <h1 class="logo"><img src="./images/logo-asiatica-travel.png" alt="#" height="32px"></h1>
+        <h3 class="fw-normal slogan">Espace Voyageurs</h3>
+        <!-- HAMBURGER MENU -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div class="menu-bar1"></div>
+          <div class="menu-bar2"></div>
+          <div class="menu-bar3"></div>
+        </div>
+      </div>
+      <div class="acount-user">
+        <div class="user">
+          <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21.75C17.3848 21.75 21.75 17.3848 21.75 12C21.75 6.61522 17.3848 2.25 12 2.25C6.61522 2.25 2.25 6.61522 2.25 12C2.25 17.3848 6.61522 21.75 12 21.75Z"
+              stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M12 12C13.2416 12 14.248 10.9926 14.248 9.75C14.248 8.50736 13.2416 7.5 12 7.5C10.7584 7.5 9.75197 8.50736 9.75197 9.75C9.75197 10.9926 10.7584 12 12 12Z"
+              stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M14.9974 14.25C16.6528 14.25 17.9737 15.7453 16.8057 16.9195C15.703 18.0281 13.9431 18.75 12 18.75C10.0569 18.75 8.29702 18.0281 7.19428 16.9195C6.02632 15.7453 7.34722 14.25 9.00262 14.25L14.9974 14.25Z"
+              stroke="#555" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          Mr.Do Ngoc Long
+        </div>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+
+  </header>
+  <section class="programe" id="programe">
+    <div class="overview">
+      <section class="price" id="ValidateQoutation">
+        <div class="overview">
+          <h3 class="p-1rem text-center text-white bg-darkgray text-uppercase"><span
+              id="ctl00_ContentPlaceHolder1_lblValidateQoutation">VALIDATE THE QUOTE WITH ASIATICA</span></h3>
+          <p>
+            <strong>
+              <span id="ctl00_ContentPlaceHolder1_lblHi"><b>Mr. Yoram Gdalyahu</b></span>,</strong>
+          </p>
+          <p>
+            <span id="ctl00_ContentPlaceHolder1_lblHello">This form is used to validate your travel quote with Asiatica.
+              Please note that it is just a first procedure to book a trip with us and it does not yet request a
+              financial payment.</span><br>
+
+          </p>
+
+          <div id="ctl00_ContentPlaceHolder1_pnlPrice" class="table-hotel container">
+
+            <h4 class="title">
+              <span id="ctl00_ContentPlaceHolder1_lblValidate1">1. Travel price</span>
+            </h4>
+
+
+            <div id="ctl00_ContentPlaceHolder1_rptStar_ctl00_pnlPriceConfirm" title="5">
+
+              <b>
+                <span id="ctl00_ContentPlaceHolder1_rptStar_ctl00_lblOptionName">&nbsp;</span></b>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="rdoPrice" id="rdoPrice5">
+                <label class="form-check-label" for="rdoPrice5">
+                  You agree with the price mentioned below.</label>
+              </div>
+
+
+
+              <div class="table-responsive">
+                <div id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_pnlPriceGeneral"
+                  style="width:100%;">
+
+
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_tdTotalPrice">
+                  <strong class="right">
+                    <span id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblHeadTotalPrice">Total
+                      price</span>: <span class="color-red">
+                      <span
+                        id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblGetSumSupTotalPrice">6,951</span>
+                      <span id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblUnitPrice">USD</span>
+                      /group</span></strong>
+                </div>
+                <div class="clear">
+                </div>
+                <table class="tablePrice table-bordered table-hover tb-hotel">
+
+                  <tbody>
+                    <tr>
+                      <td id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_tdTotalPriceTop"
+                        style="border: 0px; text-align: left; padding-left: 0px; padding-bottom: 10px;" colspan="10">
+                        <b>
+
+                          <span id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblOptionRangPax"
+                            style="color:#003770;font-weight:bold;">Price per person ( based on group of 3
+                            persons)</span>
+                        </b>
+
+
+                      </td>
+
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+
+                      <th>
+                        <span id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblHeadRoom">Room
+                          type</span>
+                      </th>
+                      <th>
+                        <span
+                          id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblHeadAdult">Price</span>
+                      </th>
+
+
+
+
+                      <th>
+                        <span
+                          id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblHeadUnitPrice">Unit</span>
+                      </th>
+                      <th>
+                        <span
+                          id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_lblHeadNotePrice">Note</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+                    <tr
+                      id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_rptRoomingListPrice_ctl00_trBedNone">
+                      <td colspan="10" style="border: 0px; text-align: left; display: none;">
+                        Rooming 1 Triple - 3 pax
+                      </td>
+                    </tr>
+
+                    <tr
+                      id="ctl00_ContentPlaceHolder1_rptStar_ctl00_rptOptionPrice_ctl00_rptRoomingListPrice_ctl00_trBebType">
+                      <td style="width: 8%;">
+                        Triple
+                      </td>
+                      <td style="width: 10%;">
+                        <strong class="red" style="color: #E20613;">
+                          2,317</strong>
+                      </td>
+                      <td style="width: 10%;">
+                        USD
+
+                      </td>
+                      <td style="width: 25%;">
+                        PER PERSON
+                      </td>
+                    </tr>
+
+
+
+
+
+
+
+
+                    <tr>
+                      <td colspan="10" style="border: 0px !important; margin: 0; padding: 0;">
+
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </section>
+
+  <div class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">
+          Programe</a></li>
+      <li><a href="#">History</a></li>
+
+    </ul>
+    <div class="text-welcome">
+      Welcome to client space of <strong>Mr.Do Ngoc Long</strong>. Your private travel consultant:
+    </div>
+    <div class="sale">
+      <div class="d-flex">
+        <div class="img"><img src="http://phototicket.asiatica.com/DataUpload/Avarta/321163221MQD_6382.png"></div>
+        <div class="info box-client">
+          <p><span> Ms.</span> Luong Thuy My (Andrea)</p>
+          <p><span>Email:</span> my@asiatica.com</p>
+          <p><span>Tel.:</span> +84 2462662816 (ext: 145)</p>
+          <p><span> Mobile: </span>(+84) 963 220 385</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <h3 class="fw-normal mb-2">VĂN PHÒNG HÀ NỘI</h3>
+    <p>
+
+      Tòa nhà M3M4 - 91 Nguyễn Chí Thanh - Đống Đa - Hà Nội <br>
+
+      Email: info.vn@asiatica.com<br>
+
+      Hotline: +84 24 6266 2816
+    </p>
+    <br>
+    <h3 class="fw-normal mb-2">VĂN PHÒNG HÀ NỘI</h3>
+    <p>
+
+      Tòa nhà M3M4 - 91 Nguyễn Chí Thanh - Đống Đa - Hà Nội <br>
+
+      Email: info.vn@asiatica.com<br>
+
+      Hotline: +84 24 6266 2816
+    </p>
+  </footer>
+</body>
+<script>
+  const menuToggle = document.querySelector('.hamburger-menu');
+  const sidebar = document.querySelector('.menu');
+  // const stickyMenu = document.querySelector('.sticky-menu');
+  const fixBtn = document.querySelector('.fix-btn');
+  const header = document.querySelector(".header");
+  // let navbarLinks = document.querySelectorAll(".sticky-menu a");
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
+    fixBtn.classList.toggle('d-none');
+    // stickyMenu.classList.toggle('d-none')
+    document.body.classList.toggle('overlay-hidden');
+  })
+  //   scroll
+  let scrollpos = window.scroll;
+
+
+  const header_height = header.offsetHeight;
+  // const stickyMenu_height = stickyMenu.offsetHeight;
+
+
+  const add_class_on_scroll = () => header.classList.add("fade-in");
+  const remove_class_on_scroll = () => header.classList.remove("fade-in");
+
+  window.addEventListener("scroll", e => {
+    scrollpos = window.scrollY;
+    //   const padHeight = header.outerHeight;
+    if (scrollpos >= header_height) {
+      add_class_on_scroll();
+      // document.body.style.paddingTop = header_height + 'px'
+    }
+    else {
+      remove_class_on_scroll();
+      // document.body.style.paddingTop = '0px'; 
+    }
+
+  })
+</script>
+
+</html>

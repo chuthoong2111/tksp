@@ -176,7 +176,7 @@ header .logo img {
 .sticky-menu ul {
   list-style: none;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
