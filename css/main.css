@@ -321,7 +321,8 @@ header .logo img {
 }
 .fix-btn a {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 0.5rem;
   align-items: center;
   width: 50%;
   padding: 0.5rem 1rem;
@@ -509,4 +510,12 @@ header .logo img {
 .modal-title {
   font-size: 20px;
   font-weight: 400;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.fb-100 {
+  flex-basis: 100% !important;
 }/*# sourceMappingURL=main.css.map */
