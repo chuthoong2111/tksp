@@ -7,8 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1rem;
   font-family: "Inter", sans-serif;
+  font-size: 1rem;
 }
 
 .bg-red {
@@ -229,9 +229,13 @@ header .logo img {
 }
 .menu .sale {
   padding: 2rem;
+  padding-bottom: 8rem;
   color: #454545;
   background: #e2e2e2;
   border-top: 1px solid #ddd;
+}
+.menu .sale .info * {
+  font-size: 90%;
 }
 
 .text-welcome {
@@ -495,7 +499,10 @@ header .logo img {
   color: #424242;
 }
 .footer h3 {
-  color: #242424;
+  color: #555;
+  letter-spacing: 1px;
+  font-size: 86%;
+  font-weight: 700;
 }
 
 .modal-header {

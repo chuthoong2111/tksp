@@ -9,9 +9,11 @@ $transation: all .35s ease-in-out;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1rem;
   font-family: 'Inter', sans-serif;
+  font-size: 1rem;
 }
+
+
 
 .bg-red {
   background: #DA2032;
@@ -241,9 +243,14 @@ header .logo {
 
   .sale {
     padding: 2rem;
+    padding-bottom: 8rem;
     color: #454545;
     background: #e2e2e2;
     border-top: 1px solid #ddd;
+
+    .info * {
+      font-size: 90%;
+    }
   }
 }
 
@@ -543,7 +550,10 @@ header .logo {
   color: #424242;
 
   h3 {
-    color: #242424;
+    color: #555;
+    letter-spacing: 1px;
+    font-size: 86%;
+    font-weight: 700;
   }
 }
 
