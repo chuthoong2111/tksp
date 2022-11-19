@@ -145,6 +145,18 @@ header .logo {
   background-color: #666;
   margin: 0.4rem 0;
   transition: 0.4s;
+
+  .sticky-menu & {
+    background: #fff;
+  }
+}
+
+.menu-when-scroll {
+  display: none;
+
+  &.d-block {
+    display: block;
+  }
 }
 
 .menu-bar2 {
@@ -191,7 +203,7 @@ header .logo {
   li {
     a {
       border-radius: .25rem;
-      padding: .5rem 1rem;
+      padding: .25rem .75rem;
       transition: $transation;
       color: #fff;
       display: block;
@@ -226,7 +238,7 @@ header .logo {
   width: 100vw;
   transform: translateX(-100vw);
   z-index: 100;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,8 +279,8 @@ header .logo {
 .menu ul {
   display: block;
   position: relative;
-  background-color: #AAB5BA;
-  margin-top: 100px;
+  // background-color: #AAB5BA;
+  background-color: #e2e2e2;
   border: .5rem #fff solid;
   width: 100%;
   height: 100%;
@@ -291,7 +303,7 @@ header .logo {
   color: #454545;
   padding: 1rem 3rem;
   display: block;
-  border-bottom: 1px solid rgba(#fff, .12);
+  border-bottom: 1px solid rgba(#fff, 1);
   text-transform: uppercase;
 }
 

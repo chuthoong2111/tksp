@@ -143,6 +143,18 @@ header .logo img {
   margin: 0.4rem 0;
   transition: 0.4s;
 }
+.sticky-menu .menu-bar1,
+.sticky-menu .menu-bar2,
+.sticky-menu .menu-bar3 {
+  background: #fff;
+}
+
+.menu-when-scroll {
+  display: none;
+}
+.menu-when-scroll.d-block {
+  display: block;
+}
 
 .menu-bar2 {
   width: 1.5rem;
@@ -184,7 +196,7 @@ header .logo img {
 }
 .sticky-menu li a {
   border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.75rem;
   transition: all 0.35s ease-in-out;
   color: #fff;
   display: block;
@@ -215,7 +227,6 @@ header .logo img {
   width: 100vw;
   transform: translateX(-100vw);
   z-index: 100;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -251,8 +262,7 @@ header .logo img {
 .menu ul {
   display: block;
   position: relative;
-  background-color: #AAB5BA;
-  margin-top: 100px;
+  background-color: #e2e2e2;
   border: 0.5rem #fff solid;
   width: 100%;
   height: 100%;
@@ -272,7 +282,7 @@ header .logo img {
   color: #454545;
   padding: 1rem 3rem;
   display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid white;
   text-transform: uppercase;
 }
 

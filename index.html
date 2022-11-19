@@ -75,7 +75,13 @@
         <li><a href="#hotel">Hotel</a></li>
         <li><a href="#price">Price</a></li>
         <li><a href="#gallery">Picture</a></li>
-
+        <li class="menu-when-scroll">
+          <div class="hamburger-menu" id="hamburger-menu">
+            <div class="menu-bar1"></div>
+            <div class="menu-bar2"></div>
+            <div class="menu-bar3"></div>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -471,7 +477,7 @@
     <div class="text-welcome">
       Welcome to client space of <strong>Mr.Do Ngoc Long</strong>. Your private travel consultant:
     </div>
-    <div class="sale">
+    <!-- <div class="sale">
       <div class="d-flex">
         <div class="img"><img src="http://phototicket.asiatica.com/DataUpload/Avarta/321163221MQD_6382.png"></div>
         <div class="info box-client">
@@ -481,7 +487,7 @@
           <p><span> Mobile: </span>(+84) 963 220 385</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <footer class="footer">
     <h3 class="fw-normal mb-2">VĂN PHÒNG HÀ NỘI</h3>
@@ -506,19 +512,23 @@
   </footer>
 </body>
 <script>
-  const menuToggle = document.querySelector('.hamburger-menu');
+  const menuToggle = document.querySelectorAll('.hamburger-menu');
+  const menuWhenScroll = document.querySelector('.menu-when-scroll');
   const sidebar = document.querySelector('.menu');
   const stickyMenu = document.querySelector('.sticky-menu');
   const fixBtn = document.querySelector('.fix-btn');
   const header = document.querySelector(".header");
   let navbarLinks = document.querySelectorAll(".sticky-menu a");
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    sidebar.classList.toggle('active');
-    fixBtn.classList.toggle('d-none');
-    stickyMenu.classList.toggle('d-none')
-    document.body.classList.toggle('overlay-hidden');
-  })
+  menuToggle.forEach(function (elem) {
+    elem.addEventListener('click', () => {
+      elem.classList.toggle('active');
+      sidebar.classList.toggle('active');
+      fixBtn.classList.toggle('d-none');
+      // stickyMenu.classList.toggle('d-none')
+      document.body.classList.toggle('overlay-hidden');
+    })
+  });
+
   //   scroll
   let scrollpos = window.scroll;
 
@@ -527,17 +537,26 @@
   const stickyMenu_height = stickyMenu.offsetHeight;
 
 
-  const add_class_on_scroll = () => stickyMenu.classList.add("fade-in");
-  const remove_class_on_scroll = () => stickyMenu.classList.remove("fade-in");
+  const add_class_on_scroll = () =>
+    stickyMenu.classList.add("fade-in");
+
+  const remove_class_on_scroll = () =>
+    stickyMenu.classList.remove("fade-in");
+
 
   window.addEventListener("scroll", e => {
     scrollpos = window.scrollY;
     //   const padHeight = header.outerHeight;
     if (scrollpos >= header_height) {
       add_class_on_scroll();
-      document.body.style.paddingTop = header_height + 'px'
+      sidebar.style.paddingTop = 48 + 'px';
+      menuWhenScroll.classList.add("d-block");
     }
-    else { remove_class_on_scroll(); document.body.style.paddingTop = '0px'; }
+    else {
+      remove_class_on_scroll();
+      sidebar.style.paddingTop = header_height + 8 + 'px';
+      menuWhenScroll.classList.remove("d-block");
+    }
 
     navbarLinks.forEach(link => {
       let section = document.querySelector(link.hash);

@@ -308,13 +308,13 @@
   window.addEventListener("scroll", e => {
     scrollpos = window.scrollY;
     //   const padHeight = header.outerHeight;
-    if (scrollpos >= header_height) {
+    if (scrollpos >= header_height + 30) {
       add_class_on_scroll();
       // document.body.style.paddingTop = header_height + 'px'
     }
     else {
       remove_class_on_scroll();
-      // document.body.style.paddingTop = '0px'; 
+      sidebar.style.paddingTop = header_height + 'px';
     }
 
   })
