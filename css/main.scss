@@ -188,6 +188,7 @@ header .logo {
     top: 0;
     width: 100%;
     animation: smoothScroll 1s forwards;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
 
   ul {
@@ -632,4 +633,29 @@ header .logo {
     }
   }
 
+}
+
+.sticky-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #0A68B3;
+  gap: .5rem;
+  width: 100%;
+  padding: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  z-index: 2;
+
+  svg {
+    fill: #0A68B3;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: #DA2032;
+      color: #DA2032;
+    }
+  }
 }
